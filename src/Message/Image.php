@@ -36,7 +36,7 @@ class Image extends Message implements MessageInterface
     public static function send($username, $mix)
     {
         $file = is_string($mix) ? $mix : static::getDefaultFile($mix['raw']);
-//	    vbot('console')->log('收到图片:'.$file);
+
         if (!is_file($file)) {
             return false;
         }

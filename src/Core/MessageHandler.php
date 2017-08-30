@@ -10,6 +10,8 @@ use Hanson\Vbot\Contact\Groups;
 use Hanson\Vbot\Message\Text;
 use Illuminate\Support\Collection;
 use Vbot\HotGirl\HotGirl;
+use Hanson\Vbot\Message\Text;
+use Illuminate\Support\Collection;
 class MessageHandler
 {
     /**
@@ -67,9 +69,8 @@ class MessageHandler
      */
     private function heartbeat($time)
     {
-        if (time() - $time > 180) {
+        if (time() - $time > 1800) {
             Text::send('filehelper', 'heart beat '.Carbon::now()->toDateTimeString());
-	     //   HotGirl::sendPicReal();
             return time();
         }
 
@@ -173,10 +174,9 @@ class MessageHandler
                 if ($collection) {
                     $this->cache($msg, $collection);
                     $this->console($collection);
-                    if ($this->handler) {
+                    if (!$this->vbot->messageExtension->exec($collection) && $this->handler) {
                         call_user_func_array($this->handler, [$collection]);
                     }
-                    $this->vbot->messageExtension->exec($collection);
                 }
             }
         }

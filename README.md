@@ -36,14 +36,6 @@
 composer require hanson/vbot
 ```
 
-## 体验
-
-<img src="https://ws2.sinaimg.cn/large/685b97a1gy1fdordpa0cgj20e80e811z.jpg" height="320">
-
-扫码后，验证输入“echo”即可自动加为好友并且拉入vbot体验群。
-
-vbot示例源码为 https://github.com/HanSon/my-vbot
-
 ## 文档
 
 [详细文档](https://hanson.github.io/vbot)
@@ -69,8 +61,14 @@ donate 名单 （排名按时间倒序）
 
 |捐助者|金额|
 |-----|----|
+|[RunnerLee](https://github.com/RunnerLee)| ￥20|
+|[elrond-g](https://github.com/elrond-g)| ￥6.66|
+|匿名| ￥10|
+|[醉赞](http://zuizan100.com)| ￥188|
+|堃| ￥26.66|
+|J| ￥6.66 * 5|
+|[yaoshanliang](https://github.com/yaoshanliang)| ￥6.66|
 |匿名| ￥18.8|
-|J| ￥6.66 * 2|
 |[summer](https://github.com/summerblue)|￥66.66 + 200|
 |[gaojiyong](https://github.com/gaojiyong)| ￥8.88 * 2|
 |匿名| ￥66.66|
@@ -90,7 +88,6 @@ donate 名单 （排名按时间倒序）
 |匿名| ￥6.66|
 |[vochina](https://github.com/vochina)|￥18.88|
 |李大善人| ￥666|
-|J| ￥6.66|
 |匿名| ￥10|
 |细高| ￥6.66|
 |匿名| ￥20|

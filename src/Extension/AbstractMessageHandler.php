@@ -23,18 +23,19 @@ abstract class AbstractMessageHandler
     public $baseExtensions = [];
 
     /**
-     * 拓展配置.
+     * 拓展�
+     * �置.
      *
      * @var
      */
-    public static $config;
+    public $config;
 
     /**
      * 初始化拓展.
      */
     public function init()
     {
-        static::$config = vbot('config')->get('extension.'.$this->name);
+        $this->config = vbot('config')->get('extension.'.$this->name);
 
         $this->admin();
 
@@ -49,7 +50,8 @@ abstract class AbstractMessageHandler
     abstract public function register();
 
     /**
-     * 开发者需要实现的方法.
+     * 开发�
+     * 需要实现的方法.
      *
      * @param Collection $collection
      *
@@ -61,6 +63,8 @@ abstract class AbstractMessageHandler
      * 消息处理器.
      *
      * @param Collection $collection
+     *
+     * @return mixed
      */
     final public function messageHandler(Collection $collection)
     {
@@ -85,7 +89,7 @@ abstract class AbstractMessageHandler
         }
 
         if (!$this->status) {
-            return;
+            return false;
         }
 
         return $this->handler($collection);
@@ -101,7 +105,8 @@ abstract class AbstractMessageHandler
     }
 
     /**
-     * 设置拓展开关.
+     * 设置拓展开�
+     * �.
      *
      * @param bool $boolean
      * @param $collection
