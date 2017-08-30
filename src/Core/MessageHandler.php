@@ -9,9 +9,6 @@ use Hanson\Vbot\Contact\Friends;
 use Hanson\Vbot\Contact\Groups;
 use Hanson\Vbot\Message\Text;
 use Illuminate\Support\Collection;
-use Vbot\HotGirl\HotGirl;
-use Hanson\Vbot\Message\Text;
-use Illuminate\Support\Collection;
 class MessageHandler
 {
     /**
